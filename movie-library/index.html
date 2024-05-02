@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+  <link rel="icon" type="image/jpg" href="assests/Logo.png" />
+  <title>Movie Library</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <!-- Header -->
+  <header>
+    <nav>
+      <div class="logo">
+        <img src="assests/Logo.png" alt="Logo" aria-label="Movie Library Logo">
+      </div>
+      <div class="nav-links">
+        <a href="#" class="active">HOME</a>
+        <a href="#">OUR SCREENS</a>
+        <a href="#">SCHEDULE</a>
+        <a href="#movie-library">MOVIE LIBRARY</a>
+        <a href="#contact">LOCATION & CONTACT</a>
+      </div>
+      <button class="hamburger-menu" aria-label="Toggle Navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- Main Visual -->
+  <main>
+    <!--Slideshow Contents -->
+    <section class="main-visual">
+      <div class="slide">
+        <img src="assests/banner.png" alt="Slide 1" aria-label="Main Visual Slide 1">
+      </div>
+      <div class="slide">
+        <img src="assests/banner1.png" alt="Slide 2" aria-label="Main Visual Slide 2">
+      </div>
+      <div class="slide">
+        <img src="assests/banner2.png" alt="Slide 3" aria-label="Main Visual Slide 3">
+      </div>
+    </section>
+
+    <!-- Site Introduction -->
+    <section class="intro">
+      <h1>MOVIE LIBRARY</h1>
+      <p style="color: #a4a4a4;">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+        invidunt ut labore et
+        dolore magna aliquyam erat, sed diam voluptua.</p>
+    </section>
+
+    <!-- Collect your favorites -->
+    <section class="movie-grid" id="movie-library">
+      <div class="movie-grid-container">
+        <h2 class="grid-title">Collect your Favourites</h2>
+        <div class="search-movies">
+          <span class="material-symbols-outlined">
+            search
+          </span>
+          <input type="text" placeholder="     Search title and add to grid" aria-label="Search movies">
+        </div>
+      </div>
+      <div class="added-shows"></div>
+      <hr>
+      <div class="movies">
+        <!-- Static movie items -->
+        <div class="movie-item">
+          <img src="assests/batman.png" alt="Batman Returns" aria-label="Batman Returns movie poster">
+          <h3>Batman Returns</h3>
+          <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut...</p>
+          <button class="remove-button" aria-label="Remove Batman Returns from grid">X</button>
+        </div>
+        <div class="movie-item" id="wildmovie">
+          <img src="assests/horse.png" alt="Wild Wild West" aria-label="Wild Wild West movie poster">
+          <h3>Wild Wild West</h3>
+          <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut...</p>
+          <button class="remove-button" aria-label="Remove Wild Wild West from grid">X</button>
+        </div>
+        <div class="movie-item">
+          <img src="assests/spiderman.png" alt="The Amazing Spiderman" aria-label="The Amazing Spiderman movie poster">
+          <h3>The Amazing Spiderman</h3>
+          <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut...</p>
+          <button class="remove-button" aria-label="Remove The Amazing Spiderman from grid">X</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Us -->
+    <section class="contact" id="contact">
+      <h2>How to reach us</h2>
+      <p style="color: #a4a4a4;">Lorem ipsum dolor sit amet, consectetur.</p>
+      <div class="contact-container">
+        <form id="contact-form" method="POST" action="submit.php">
+          <div class="form-group name-group">
+            <div>
+              <label for="firstName" style="color: #a4a4a4;">First Name*</label>
+              <input style="width: 97%;" type="text" id="firstName" name="firstName" aria-required="true">
+            </div>
+            <div>
+              <label for="lastName" style="color: #a4a4a4;">Last Name*</label>
+              <input type="text" id="lastName" name="lastName" aria-required="true">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="email" style="color: #a4a4a4;">Email*</label>
+            <input type="email" id="email" name="email" aria-required="true">
+          </div>
+          <div class="form-group">
+            <label for="telephone" style="color: #a4a4a4;">Telephone</label>
+            <input type="tel" id="telephone" name="telephone">
+          </div>
+          <div class="form-group">
+            <label for="message" style="color: #a4a4a4;">Message</label>
+            <textarea id="message" name="message"></textarea>
+            <p style="color: #a4a4a4;">*required fields</p>
+          </div>
+          <div class="form-group">
+            <input style="width: 20px; height:15px;" type="checkbox" id="termsConditions" name="termsConditions"
+              aria-required="true">
+            <label for="termsConditions"><span style="color: #a4a4a4;">I agree to the </span><span
+                style="text-decoration: underline;">Terms &
+                Conditions</span></label>
+          </div>
+          <button type="submit">Submit</button>
+        </form>
+        <div id="thank-you-message" aria-live="polite"></div>
+        <div class="map-container">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3950.508999605715!2d80.96643857449058!3d8.0494472035535!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3afb67ec6b0d46c9%3A0xbf4120df04157750!2sSwiss%20Metal%20Centre!5e0!3m2!1sen!2slk"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer">
+      <div>
+        <p>IT Group</p>
+        <p>C. Salvador de Madariaga 1</p>
+        <p>28027 Madrid, Spain</p>
+      </div>
+      <div>
+        <p>Follow us on <a href="#"><img src="assests/twitter.png" alt="Twitter" aria-label="Twitter"></a> <a href="#">
+            <img src="assests/youtube.png" alt="YouTube" aria-label="YouTube"></a></p>
+      </div>
+    </div>
+    <hr>
+    <div class="copyright">
+      <p>Copyright &copy; 2022 IT Hotels. All rights reserved.</p>
+      <p>Photos by Felix Mooneeram & Serge Kutuzov on Unsplash</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
